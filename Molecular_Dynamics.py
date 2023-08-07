@@ -1,4 +1,11 @@
 ''' The main class requires as input a set of co-ordinates of the atom locations in the crystal'''
+import os
+import numpy as np
+import scipy as sp
+import itertools
+from scipy.spatial import KDTree
+import matplotlib.pyplot as plt
+
 class Molecular_Dynamics:
     
     def __init__(self,xyz, box, vel = None, cutoff = 6, mr = 183.84):
